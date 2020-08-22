@@ -1,6 +1,10 @@
-d3.json('/data').then( function(data) {
-    
-})
+function buildPlot() {
+    // Read in json 
+    d3.json('/data').then( function(data) {
+        console.log(data)
+    })
+
+}
 
 
 // function buildPlot() {
