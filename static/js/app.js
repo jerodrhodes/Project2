@@ -2,6 +2,9 @@ function buildPlot() {
     // Read in json 
     d3.json('/data').then( function(data) {
         console.log(data)
+        // Get covid cases and crime cases from file
+        var covid = data[0].covid_cases;
+        var crime = data[1].crime_cases;
     })
 
 }
