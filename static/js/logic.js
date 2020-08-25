@@ -22,7 +22,7 @@ var myMap = L.map("map", {
       console.log(data)
     // Create a new choropleth layer
     choroplethLayer = L.choropleth(geoData, {
-      valueProperty: 'covid',
+      valueProperty: 'Covid_count',
       scale: ['lightyellow', 'gold', 'goldenrod', 'darkgoldenrod', 'sienna', 'saddlebrown'],
       steps: 5,
       mode: 'q',
