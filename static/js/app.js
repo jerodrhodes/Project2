@@ -24,7 +24,8 @@ function buildPlot() {
         var trace1 = {
             x: covid_cases,
             y: crime_cases,
-            mode: "scatter",
+            mode: "markers",
+            type: "scatter",
             // marker:{
             //         size: crime_cases,
             //         color: covid_cases
