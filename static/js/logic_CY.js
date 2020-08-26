@@ -65,6 +65,13 @@ d3.json('/data').then(function(data){
       ],
       layout: {
         title: '10 Highest Covid Cases by Zipcode with Crime and Population',
+        legend: {
+          orientation:"h",
+          yanchor:"bottom",
+          y:1.02,
+          xanchor:"right",
+          x:1
+          },
         yaxis: {title: 'Covid Cases and Crime',
           range: [0, 4000]},
         yaxis2: {
