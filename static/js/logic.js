@@ -1,7 +1,6 @@
 
 // Creating map object
 var myMap = L.map("map", {
-    fullscreenControl: true,
     center: [39.0997, -94.5783],
     zoom: 10
   });
@@ -37,6 +36,7 @@ var myMap = L.map("map", {
       }
     }).addTo(myMap)
 
+    // Creating legend
     var legend = L.control({ position: "bottomright" });
     legend.onAdd = function() {
       var div = L.DomUtil.create("div", "info legend");
