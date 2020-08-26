@@ -68,26 +68,17 @@ d3.json('/data').then(function(data){
         legend: {
           orientation:"h",
           yanchor:"bottom",
-          y:1.02,
-          xanchor:"right",
-          x:1
+          y:1.05,
+          xanchor:"center",
+          x:0.5
           },
         yaxis: {title: 'Covid Cases and Crime',
           range: [0, 4000]},
         yaxis2: {
           title: 'Population',
-          titlefont: {color: 'rgb(148, 103, 189)'},
-          tickfont: {color: 'rgb(148, 103, 189)'},
           overlaying: 'y',
           side: 'right',
           range: [0, 50000],
-        legend: {
-          orientation:"h",
-          yanchor:"bottom",
-          y:1.02,
-          xanchor:"right",
-          x:1
-          },
         barmode: 'group',
         bargap: 0.15,
         bargroupgap: 0.1
