@@ -1,63 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Kansas City Covid</title>
-  <!-- Bootstrap CDN-->  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+​
+    <title>COVID-19 in KC</title>
+​
+    <!-- Bootstrap CDN-->  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
   <!--Plotly-->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-  <!-- Leaflet Fullscreen -->
-  <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
-  <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
-
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
   crossorigin=""/>
-
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="static/css/album.css">
 </head>
-
-
-<body>
-
-  <div class='container'>
-    <div class='row'>
-        <div class='col-md-6'>
-          <p> Welcome </p>
-        </div>
-        <div class='col-md-6'>
-          <p>MAP</p>
-          <div id="map-holder">
-            <div class="container fill">
-              <div id="map"></div>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
             </div>
           </div>
         </div>
-    </div>
-    <div class='row'>
-      <div class='col-md-6'>
-        <div id='img1'></div>
-        <p> IMAGE 1 </p>
       </div>
-      <div class='col-md-6'>
-        <div id='img2'></div>
-        <p> IMAGE 2 </p>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>COVID-19 Cases vs Crime Count in Kansas City</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </div>
-    </div>
-    <div id='bar'></div>
-  </div>
-  
-  <!-- D3 -->
+    </header>
+​
+    <main role="main">
+​
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Welcome to our dashboard!</h1>
+          <p class="lead text-muted">On this page we present visualizations that show how COVID-19 cases compare to the amount of crime in Kansas City separated out by zip codes.</p>
+​
+        </div>
+      </section>
+​
+      <div class="album py-5 bg-light">
+        <div class="container">
+​
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card mb-4 box-shadow">
+                <div id="map-holder">
+                  <div class="container fill">
+                    <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="card mb-4 box-shadow">
+                <div id='img1'></div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="card mb-4 box-shadow">
+                <div id='img2'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+​
+    </main>
+​
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+​
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <!-- D3 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
-
+​
   <!--Plotly-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-
+​
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
@@ -71,7 +130,5 @@
   <script type="text/javascript" src="static/js/logic.js"></script>
   <script type="text/javascript" src="static/js/app.js"></script>
   <script type="text/javascript" src="static/js/logic_CY.js"></script>
-
-</body>
-
+  </body>
 </html>
