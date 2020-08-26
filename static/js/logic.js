@@ -1,6 +1,7 @@
 
 // Creating map object
 var myMap = L.map("map", {
+    fullscreenControl: true,
     center: [39.0997, -94.5783],
     zoom: 10
   });
@@ -23,7 +24,7 @@ var myMap = L.map("map", {
     // Create a new choropleth layer
     choroplethLayer = L.choropleth(geoData, {
       valueProperty: 'Covid_count',
-      scale: ['lightyellow', 'gold', 'goldenrod', 'darkgoldenrod', 'sienna', 'saddlebrown'],
+      scale: ['white', 'red'],
       steps: 5,
       mode: 'q',
       style: {
@@ -32,30 +33,30 @@ var myMap = L.map("map", {
         fillOpacity: 0.8
       },
       onEachFeature: function (feature, layer) {
-        layer.bindPopup('Zipcode: ' + feature.properties.postalcode + "<br> Cocid Cases: " + feature.properties.Covid_count)
+        layer.bindPopup('Zipcode: ' + feature.properties.postalcode + "<br> Population: " + feature.properties.Pop_count + "<br> Covid Cases: " + feature.properties.Covid_count)
       }
     }).addTo(myMap)
 
-    var legend = L.control({ position: 'bottomright' })
-    legend.onAdd = function (map) {
-      var div = L.DomUtil.create('div', 'info legend')
-      var limits = choroplethLayer.options.limits
-      var colors = choroplethLayer.options.colors
-      var labels = []
-  
+    var legend = L.control({ position: "bottomright" });
+    legend.onAdd = function() {
+      var div = L.DomUtil.create("div", "info legend");
+      var limits = [0, 100,200,300,400,500];
+      var colors = ['#ffffff', '#ffd9d9', '#ff9999', '#ff6666', '#ff3333', '#ff0000'];
+      var labels = [];
       // Add min & max
-      div.innerHTML = '<h2>Number of COVID Cases</h2> <div class="labels"><div class="min">' + limits[0] + 
-      '</div> <div class="max">' + limits[limits.length - 1] + '</div></div>'
-  
-      limits.forEach(function (limit, index) {
-        labels.push('<li style="background-color: ' + colors[index] + '"></li>')
-      })
-  
-      div.innerHTML += '<ul>' + labels.join('') + '</ul>'
-      return div
-    }
-    legend.addTo(myMap)
-  })
-
+      var legendInfo = "<h3>COVID-19 Cases</h3>" +
+        "<div class=\"labels\">" +
+          "<div class=\"min\">" + limits[0] + "</div>" +
+          "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+        "</div>";
+      div.innerHTML = legendInfo;
+      limits.forEach(function(limit, index) {
+        labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+      });
+      div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+      return div;
+    };
+    // Adding legend to the map
+    legend.addTo(myMap); })
   
 
