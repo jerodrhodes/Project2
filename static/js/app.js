@@ -27,7 +27,7 @@ function buildPlot() {
             mode: "markers",
             type: "scatter",
             // marker:{
-            //         size: crime_cases,
+            //         size: 5,
             //         color: covid_cases
             //             },
             text: zipcode
