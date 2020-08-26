@@ -32,7 +32,7 @@ var myMap = L.map("map", {
         fillOpacity: 0.8
       },
       onEachFeature: function (feature, layer) {
-        layer.bindPopup('State: ' + feature.properties.NAME+ "<br> Breweries: " + feature.properties.brewery_count)
+        layer.bindPopup('Zipcode: ' + feature.properties.postalcode + "<br> Cocid Cases: " + feature.properties.Covid_count)
       }
     }).addTo(myMap)
 
