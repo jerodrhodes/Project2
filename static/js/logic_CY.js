@@ -13,10 +13,12 @@ d3.json('/data').then(function(data){
         for (var k = 0; k <data[1].length; k++) {
 
           if (data[0][49-i].zipcode === data[2][j].zipcode & data[0][49-i].zipcode === data[1][k].zipcode) {
-            barData.push({"zipcode": "_" + data[0][49-i].zipcode + "_", 
-            "covid_cases": data[0][49-i].covid_cases,
-            "population": data[2][j].population,
-            "crime": data[1][k].crime_cases});
+            barData.push(
+                  {"zipcode": "_" + data[0][49-i].zipcode + "_", 
+                  "covid_cases": data[0][49-i].covid_cases,
+                  "population": data[2][j].population,
+                  "crime": data[1][k].crime_cases}
+                  );
           }
         }
       }
@@ -55,10 +57,13 @@ d3.json('/data').then(function(data){
 
         {
           type: 'scatter',
-          mode: 'lines+points',
+          mode: 'markers',
           x: zipcode,
           y: population,
-          marker: {color: 'red'},
+          marker: {color: 'red',
+                  symbol: 'diamond-wide-dot',
+                size: 25},
+          line: 'false',
           yaxis: 'y2',
           name: 'Population'
         }
@@ -75,6 +80,8 @@ d3.json('/data').then(function(data){
         autosize: false,
         width: "100%",
         height: '100%',
+        xaxis: {tickangle: '0',
+                title: 'Zipcode'},
         yaxis: {title: 'Covid Cases and Crime',
           range: [0, 4000]},
         yaxis2: {
@@ -94,19 +101,20 @@ d3.json('/data').then(function(data){
   function renderTable(data) {
     var tableData = [];
     for (var i = 0; i <10; i++) {
-        tableData.push({"Covid_Per_Capita": Math.round((data[i].covid_cases / data[i].population)*1000)/10 + '%',
-        "Crime_Per_Capita": Math.round((data[i].crime / data[i].population)*1000)/10 + '%'
-      })
-    }; 
+        tableData.push({
+                  "Zipcode": data[i].zipcode.slice(1, 6),
+                  "Covid_Per_Capita": Math.round((data[i].covid_cases / data[i].population)*1000)/10 + '%',
+                  "Crime_Per_Capita": Math.round((data[i].crime / data[i].population)*1000)/10 + '%'
+                  })
+        }; 
 
     var tbody = d3.select("tbody").html("");
     tableData.forEach((stat) => {
       var row = tbody.append("tr");
       Object.entries(stat).forEach(([key,value]) => {
         var cell = row.append("td");
-        
-        cell.text(value);
-        cell.text(value);
+            cell.text(value);
+        // cell.text(value);
       });
       });
    }; 
