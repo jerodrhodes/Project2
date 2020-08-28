@@ -28,6 +28,15 @@
 ###### 1. Plotly Javascript Library
 ###### 2. React Javascript Library
 
+## Data Limitations
+#### Crime Data:
+###### Includes all 2020 crime cases through August 11
+###### No discernment on type crime
+#### COVID-19 Data:
+###### Static set of cases through August 11
+#### Census Data:
+###### Projection of 2018 population from 2010 data (most recent available)
+
 
 ## Data wrangling techniques:
 
