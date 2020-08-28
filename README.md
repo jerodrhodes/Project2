@@ -16,9 +16,22 @@
 
 ## Coding approach:
 
-#### 1. Exported CSV data from Open Data KC and the Census Bureau
-#### 2. Open Data KC data used to create three data frames for covid, crime and population stats
-#### 3. Data frames were deployed using SQLAlchemy to create a SQL Database
+### Interactive Dashboard with 3 visualizations:
+#### Retrieving data for dashboard
+###### Python Flask App
+#### Map
+###### Leaflet
+###### Chloropleth Javascript Plug-in
+#### Scatter
+###### Plotly Javascript
+#### Bar
+###### Plotly Javascript Library
+###### React Javascript Library
+
+
+#### 1. 
+#### 2. 
+#### 3. 
 
 
 
@@ -27,6 +40,9 @@
 #### 1. Exported CSV data from Open Data KC and the Census Bureau
 #### 2. Open Data KC data used to create three data frames for covid, crime and population stats
 #### 3. Data frames were deployed using SQLAlchemy to create a SQL Database
+#### 4. GeoJSON data used in conjunction with covid and population data added to build choloropleth map. 
+#### 5. Used API to pull census data and combined with zip code latitude and longitude to get population by zip code.
+#### 6. Utilizing Flask,  did an API call to our SQL database to return a json list to create our visualizations
 
 
 ## Final layout:
