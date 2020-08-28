@@ -29,12 +29,6 @@
 ###### 2. React Javascript Library
 
 
-#### 1. 
-#### 2. 
-#### 3. 
-
-
-
 ## Data wrangling techniques:
 
 #### 1. Exported CSV data from Open Data KC and the Census Bureau
