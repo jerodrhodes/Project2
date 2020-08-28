@@ -15,7 +15,12 @@
 #### Our goal was to tell a story about KCMO using our visualizations and allowing end users the ability to explore the data and relationships for themselves. We hoped by showing Covid-19, crime, and population together that we might be able to deduce any pattern for the area.
 
 ##Coding approach:
-####
+
+#### 1. Exported CSV data from Open Data KC and the Census Bureau
+#### 2. Open Data KC data used to create three data frames for covid, crime and population stats
+#### 3. Data frames were deployed using SQLAlchemy to create a SQL Database
+
+
 
 ## Data wrangling techniques:
 ####
