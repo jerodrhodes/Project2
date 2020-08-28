@@ -21,7 +21,7 @@ To build the map,  chloropleth.js documentation and geoJSON data of the KCMO zip
 ## Final layout:
 ![webpage image](img/webpage1.PNG)
 ![webpage image](img/map.PNG)
-![webpage image](img/chart.PNG)
+![webpage image](img/charts.PNG)
 
 
 
