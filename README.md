@@ -17,14 +17,14 @@
 ## Coding approach:
 
 ### Interactive Dashboard with 3 visualizations:
-#### Retrieving data for dashboard
+#### Retrieving data for dashboard:
 ###### 1. Python Flask App
-#### Map
+#### Map:
 ###### 1. Leaflet
 ###### 2. Chloropleth Javascript Plug-in
-#### Scatter
+#### Scatter:
 ###### 1. Plotly Javascript
-#### Bar
+#### Bar:
 ###### 1. Plotly Javascript Library
 ###### 2. React Javascript Library
 
