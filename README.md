@@ -18,15 +18,15 @@
 
 ### Interactive Dashboard with 3 visualizations:
 #### Retrieving data for dashboard
-###### Python Flask App
+###### 1. Python Flask App
 #### Map
-###### Leaflet
-###### Chloropleth Javascript Plug-in
+###### 1. Leaflet
+###### 2. Chloropleth Javascript Plug-in
 #### Scatter
-###### Plotly Javascript
+###### 1. Plotly Javascript
 #### Bar
-###### Plotly Javascript Library
-###### React Javascript Library
+###### 1. Plotly Javascript Library
+###### 2. React Javascript Library
 
 
 #### 1. 
