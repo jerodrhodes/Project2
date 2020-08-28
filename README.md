@@ -9,17 +9,17 @@ To build the map,  chloropleth.js documentation and geoJSON data of the KCMO zip
 #### 2. What is the relationship or correlation between Covid-19 cases and population per zip code?
 #### 3. Is there other data that is contributing to Covid-19 cases and the number of crime cases per zip code?
 
-##Theme:
+## Theme:
 #### Our goal was to tell a story about KCMO using our visualizations and allowing end users the ability to explore the data and relationships for themselves. We hoped by showing Covid-19, crime, and population together that we might be able to deduce any pattern for the area.
 
 ##Coding approach:
 ####
 
-##Data wrangling techniques:
+## Data wrangling techniques:
 ####
 
-##Final layout:
-![webpage image](webpage1.jpg)
+## Final layout:
+![webpage image](img/webpage1.jpg)
 
 
 
