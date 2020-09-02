@@ -1,3 +1,5 @@
+I forked this repository because we worked on this as a team, but I wanted to have a copy of the file in my own personal GitHub repository.
+
 # COVID-19 | Crime | Populations A look at KCMO Zip Codes
 #### Project Creaters: Carlee Young, Dylan Obermueller, Jerod Rhodes, and Trevor Guleserian
 
